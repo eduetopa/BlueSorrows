@@ -1,4 +1,3 @@
-
 import { StoryData } from "@/components/StoryCard";
 
 export const mockStories: StoryData[] = [
@@ -135,3 +134,39 @@ export const genres = [
   "Poetry",
   "Dark Romance"
 ];
+
+// Definir la interfaz para un capítulo
+export interface ChapterData {
+  id: string;
+  storyId: string;
+  title: string;
+  content: string;
+  createdAt: Date;
+  readTime?: number; // Tiempo estimado de lectura en minutos
+}
+
+// Crear un array de ejemplos de capítulos
+export const mockChapters: ChapterData[] = [
+  {
+    id: "1-1",
+    storyId: "1",
+    title: "El primer encuentro",
+    content: "Todo comenzó en una noche de luna llena...",
+    createdAt: new Date("2023-01-15"),
+    readTime: 8
+  },
+  {
+    id: "1-2",
+    storyId: "1",
+    title: "Secretos revelados",
+    content: "Sophia no podía creer lo que acababa de descubrir...",
+    createdAt: new Date("2023-01-22"),
+    readTime: 10
+  },
+  // Agrega más capítulos para diferentes historias
+];
+
+// Función de utilidad para obtener capítulos de una historia
+export function getChaptersByStoryId(storyId: string): ChapterData[] {
+  return mockChapters.filter(chapter => chapter.storyId === storyId);
+}
