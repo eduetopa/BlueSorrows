@@ -43,17 +43,17 @@ export function AuthNavItem() {
         <Button variant="ghost" className="flex items-center gap-2 px-2">
           <Avatar className="h-8 w-8">
             <AvatarFallback className="bg-primary/10 text-primary">
-              {profile?.username ? profile.username.substring(0, 2).toUpperCase() : "U"}
+              {profile?.email ? profile.email.substring(0, 2).toUpperCase() : "U"}
             </AvatarFallback>
           </Avatar>
-          <span className="hidden md:inline">{profile?.username || "User"}</span>
+          <span className="hidden md:inline">{profile?.email || "User"}</span>
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <div className="flex items-center justify-start gap-2 p-2">
           <div className="flex flex-col space-y-1 leading-none">
-            <p className="font-medium">{profile?.username || "User"}</p>
+            <p className="font-medium">{profile?.email || "User"}</p>
             <p className="text-xs text-muted-foreground">{profile?.role || "user"}</p>
           </div>
         </div>

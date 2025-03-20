@@ -143,7 +143,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       // Create profile in our profiles table
       if (data.user) {
-        const profileCreated = await createUserProfile(data.user.id, email, username);
+        const profileCreated = await createUserProfile(/*data.user.id,*/ email, username);
         
         if (!profileCreated) {
           // Try to delete the auth user if profile creation fails

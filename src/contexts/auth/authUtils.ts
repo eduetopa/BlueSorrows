@@ -31,7 +31,7 @@ export const fetchUserProfile = async (userId: string): Promise<Profile | null> 
   }
 };
 
-export const createUserProfile = async (/*userId: string,*/ email: string, username: string): Promise<boolean> => {
+export const createUserProfile = async (/*userId: number,*/ email: string, username: string): Promise<boolean> => {
   try {
     //const numericId = parseInt(userId.replace(/-/g, ''), 16);      #Numeric ID AutoIncremental for the profile
     
